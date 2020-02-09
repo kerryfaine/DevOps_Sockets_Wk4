@@ -12,7 +12,7 @@ with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as s:
 
     conn, addr = s.accept()
     with conn: 
-        print(f"Incoming connection from {HOST}:{PORT}")
+        print(f"Incoming connection from {addr}") 
         while True: 
             data = conn.recv(9500)
             if not data: 
